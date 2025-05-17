@@ -202,7 +202,7 @@
                         <div class="stats-item text-center w-100 h-100">
                             <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
                                 class="purecounter"></span>
-                            <p>Clients</p>
+                            <p>DPR</p>
                         </div>
                     </div><!-- End Stats Item -->
 
@@ -210,7 +210,7 @@
                         <div class="stats-item text-center w-100 h-100">
                             <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
                                 class="purecounter"></span>
-                            <p>Projects</p>
+                            <p>GUBERNUR</p>
                         </div>
                     </div><!-- End Stats Item -->
 
@@ -218,7 +218,7 @@
                         <div class="stats-item text-center w-100 h-100">
                             <span data-purecounter-start="0" data-purecounter-end="1453"
                                 data-purecounter-duration="1" class="purecounter"></span>
-                            <p>Hours Of Support</p>
+                            <p>BUPATI</p>
                         </div>
                     </div><!-- End Stats Item -->
 
@@ -226,7 +226,7 @@
                         <div class="stats-item text-center w-100 h-100">
                             <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1"
                                 class="purecounter"></span>
-                            <p>Workers</p>
+                            <p>WALI KOTA</p>
                         </div>
                     </div><!-- End Stats Item -->
 
@@ -241,8 +241,8 @@
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
                 <span>Section Title</span>
-                <h2>Team</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+                <h2>Candidat</h2>
+                <p>Profil Para calon pemimpin dari segala daerah</p>
             </div><!-- End Section Title -->
 
             <div class="container">
@@ -255,14 +255,15 @@
                                     alt=""></div>
                             <div class="member-info">
                                 <h4>Walter White</h4>
-                                <span>Chief Executive Officer</span>
+                                <span>Dewan Perwakilan Daerah </span>
+                                <span>Fraksi Demokrat </span>
                                 <div class="social">
                                     <a href=""><i class="bi bi-twitter-x"></i></a>
                                     <a href=""><i class="bi bi-facebook"></i></a>
                                     <a href=""><i class="bi bi-instagram"></i></a>
                                     <a href=""><i class="bi bi-linkedin"></i></a>
                                 </div>
-                            </div>
+                            </div> 
                         </div>
                     </div><!-- End Team Member -->
 
