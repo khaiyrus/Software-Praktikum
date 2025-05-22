@@ -45,9 +45,9 @@
                 <ul>
                     <li><a href="#hero" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#team">Team</a></li>
+                    {{-- <li><a href="#services">Candidat</a></li> --}}
+                    <li><a href="#candidat">Candidat</a></li>
+                    <li><a href="#galery">Galery</a></li>
                     <li class="dropdown"><a href="#"><span>Dropdown</span> <i
                                 class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
@@ -68,7 +68,7 @@
                         </ul>
                     </li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="#">Login</a></li>
+                    <li><a href="{{ route('login') }}">Login</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
@@ -115,7 +115,7 @@
 
                     <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="100">
                         <div class="service-item position-relative">
-                            <<div class="icon"><i class="bi bi-person-badge icon"></i>
+                            <div class="icon"><i class="bi bi-person-badge icon"></i>
                         </div>
                         <h4><a href="" class="stretched-link">Pertama</a></h4>
                         <p>Masukkan NIK Anda di halaman voting untuk verifikasi.</p>
@@ -236,7 +236,7 @@
 
         </section><!-- /Stats Section -->
         <!-- Team Section -->
-        <section id="team" class="team section">
+        <section id="candidat" class="team section">
 
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
@@ -263,7 +263,7 @@
                                     <a href=""><i class="bi bi-instagram"></i></a>
                                     <a href=""><i class="bi bi-linkedin"></i></a>
                                 </div>
-                            </div> 
+                            </div>
                         </div>
                     </div><!-- End Team Member -->
 
@@ -312,8 +312,8 @@
 
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
-                <span>Testimonials</span>
-                <h2>Testimonials</h2>
+                <span>VISI MISI</span>
+                <h2>Visi Misi</h2>
                 <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
             </div><!-- End Section Title -->
 
@@ -420,15 +420,7 @@
       </div>
 
     </section><!-- /Testimonials Section -->
-    <!-- Services Section -->
-    <section id="services" class="services section light-background">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span>Services</span>
-        <h2>Services</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
 
       <div class="container">
 
@@ -516,12 +508,12 @@
     </section><!-- /Services Section -->
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
+    <section id="galery" class="portfolio section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <span>Portfolio</span>
-        <h2>Portfolio</h2>
+        <span>Galery</span>
+        <h2>Galery</h2>
         <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
       </div><!-- End Section Title -->
 
