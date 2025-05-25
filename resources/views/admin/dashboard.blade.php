@@ -153,30 +153,49 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
+                        <!-- Icon untuk tampilan mobile -->
                         <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#"
                             data-bs-toggle="dropdown">
                             <i class="align-middle" data-feather="settings"></i>
                         </a>
 
+                        <!-- Avatar + Nama untuk tampilan desktop -->
                         <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#"
                             data-bs-toggle="dropdown">
-                            {{-- <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> --}}
+                            <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" />
                             <span class="text-dark">{{ Auth::user()->name }}</span>
                         </a>
+
+                        <!-- Dropdown Menu -->
                         <div class="dropdown-menu dropdown-menu-end">
-                            <a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1"
-                                    data-feather="user"></i> Profile</a>
-                            <a class="dropdown-item" href="#"><i class="align-middle me-1"
-                                    data-feather="pie-chart"></i> Analytics</a>
+                            <a class="dropdown-item" href="pages-profile.html">
+                                <i class="align-middle me-1" data-feather="user"></i> Profile
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="align-middle me-1" data-feather="pie-chart"></i> Analytics
+                            </a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="index.html"><i class="align-middle me-1"
-                                    data-feather="settings"></i> Settings & Privacy</a>
-                            <a class="dropdown-item" href="#"><i class="align-middle me-1"
-                                    data-feather="help-circle"></i> Help Center</a>
+                            <a class="dropdown-item" href="index.html">
+                                <i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="align-middle me-1" data-feather="help-circle"></i> Help Center
+                            </a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Log out</a>
+
+                            <!-- Tombol Logout (menggunakan POST) -->
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                <i class="align-middle me-1" data-feather="log-out"></i> Log out
+                            </a>
+
+                            <!-- Form Logout (disembunyikan) -->
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
                         </div>
                     </li>
+
                 </ul>
             </div>
         </nav>

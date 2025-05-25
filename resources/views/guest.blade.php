@@ -36,7 +36,7 @@
     <header id="header" class="header d-flex align-items-center sticky-top">
         <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-            <a href="/guest.blade.php" class="logo d-flex align-items-center me-auto">
+            <a href="/guest" class="logo d-flex align-items-center me-auto">
                 <img src="build/assetsGuest/img/logo.png" alt="">
                 <h1 class="sitename">Vote</h1>
             </a>
@@ -48,7 +48,7 @@
                     {{-- <li><a href="#services">Candidat</a></li> --}}
                     <li><a href="#candidat">Candidat</a></li>
                     <li><a href="#galery">Galery</a></li>
-                    <li class="dropdown"><a href="#"><span>Dropdown</span> <i
+                    {{-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i
                                 class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
                             <li><a href="#">Dropdown 1</a></li>
@@ -66,7 +66,7 @@
                             <li><a href="#">Dropdown 3</a></li>
                             <li><a href="#">Dropdown 4</a></li>
                         </ul>
-                    </li>
+                    </li> --}}
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="{{ route('login') }}">Login</a></li>
                 </ul>

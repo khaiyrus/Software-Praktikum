@@ -8,6 +8,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
+use App\Providers\RouteServiceProvider;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -22,13 +23,36 @@ class AuthenticatedSessionController extends Controller
     /**
      * Handle an incoming authentication request.
      */
-    public function store(LoginRequest $request): RedirectResponse
+    public function store(Request $request): RedirectResponse
     {
-        $request->authenticate();
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+
+        $user = \App\Models\User::where('email', $request->email)->first();
+
+        if ($user && $user->role !== 'admin' && !$user->is_approved) {
+            return redirect('/login')->with('error', 'Akun Anda belum disetujui oleh admin.');
+        }
+
+        if (!Auth::attempt($request->only('email', 'password'), $request->boolean('remember'))) {
+            return redirect('/login')->with('error', 'Email atau password salah.');
+        }
 
         $request->session()->regenerate();
 
-        return redirect()->intended(route('dashboard', absolute: false));
+        $user = Auth::user();
+
+        if ($user->role === 'admin') {
+        return redirect()->route('dashboard');
+        } elseif ($user->role === 'panitia') {
+            return redirect('panitia.dashboard');
+        } elseif ($user->role === 'kandidat') {
+            return redirect()->route('kandidat.dashboard');
+        }
+
+        return redirect('/login');
     }
 
     /**
@@ -42,6 +66,6 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/guest');
+        return redirect('/');
     }
 }
