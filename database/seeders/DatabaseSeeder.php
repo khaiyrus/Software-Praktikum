@@ -17,8 +17,21 @@ class DatabaseSeeder extends Seeder
 
         User::factory()->create([
             'name' => 'virus',
+            'role' => 'admin',
             'email' => 'virus@admin.com',
             'password' => '12345678',
         ]);
+        // User::factory()->create([
+        //     'name' => 'fikri',
+        //     'role' => 'panitia',
+        //     'email' => 'fikri@panitia.com',
+        //     'password' => '12345678',
+        // ]);
+        // User::factory()->create([
+        //     'name' => 'diva',
+        //     'role' => 'kandidat',
+        //     'email' => 'diva@kandidat.com',
+        //     'password' => '12345678',
+        // ]);
     }
 }
